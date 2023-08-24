@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "spacetron";
+  src: url("./fonts/spacetron.woff2") format("woff2"),
+    url("./fonts/spacetron.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "spacetron";
+  color: #ffaae6;
+}
+
+body {
+  background: radial-gradient(#550555, #2c062c, #18011d);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: calc(100% / 10);
+}
+
+h1 {
+  font-size: 80px;
+}
+
+.display {
+  font-size: 100px;
+}
+
+h1,
+.display {
+  text-shadow: 0 0 40px rgba(255, 158, 247, 0.9);
+  animation: glow2 4s infinite ease-in-out;
+}
+
+button {
+  padding: 8px;
+  margin: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 158, 247, 0.5);
+  background-color: #750a75;
+  animation: glow 4s infinite ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: radial-gradient(#550555, #2c062c);
+  transform: scale(1.1);
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(255, 158, 247, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 158, 247, 0.9);
+  }
+}
+
+@keyframes glow2 {
+  0%,
+  100% {
+    text-shadow: 0 0 15px rgba(255, 158, 247, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(255, 158, 247, 0.9);
+    transform: scale(1.05);
+  }
+}
